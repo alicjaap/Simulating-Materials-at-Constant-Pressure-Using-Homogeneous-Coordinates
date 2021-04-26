@@ -340,11 +340,13 @@ def timestep_V(dim, N, s, vs, lam, vlam, V0, P_t, dt, neighbour_b, cell_l0,  cut
 #%%
 np.random.seed(2)
 random.seed(2)
+#Routine 1:
 #lattice IC with small random deviations
 #Is = lattice(a=spacing,side=side, dim=dim)+(np.random.random((N,dim))-0.5)*spacing*0.05
+
+#Routine 2:
 lamfin = 0.906
 cell_l_scaled=cell_l*lamfin*0.68
-
 Is = fit_in_cell(dim, N, cell_l_scaled, lamfin*np.loadtxt("s_dt0.500_W10E6.csv", delimiter=','))
 
 
@@ -356,9 +358,13 @@ plt.ylabel('y')
 plt.title('Initial positions')
 plt.show()
 
-Ilam = 1.0
+#Routine 1:
 #Ivs = Boltzmann(N, dim, target_T)
+
+#Routine 2:
 Ivs = np.loadtxt("vs_dt0.500_W10E6.csv", delimiter=',')
+
+Ilam = 1.0
 Ivlam = 0
 neighbour_b = neighbour_list(neighbour_range,dim)
 # %%
