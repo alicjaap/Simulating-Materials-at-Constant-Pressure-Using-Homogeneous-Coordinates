@@ -1,4 +1,4 @@
 # Simulating-Materials-at-Constant-Pressure-Using-Homogeneous-Coordinates
-To run code from equilibrium state:
-1) Run code from the lattice structure with initial Boltzmann distribution for W=10e6.
-2) Then run simulation again for any value of W but with initial value of lambda
+To run code from equilibrium state for best results:
+1) Run code from the using Routine 1; initial lattice structure and Boltzmann distribution for initial veclocity with W=10e6 until thermalisation.
+4) Then run simulation again using Routine 2; set lamfin equal to final value of lambda from first run,  
